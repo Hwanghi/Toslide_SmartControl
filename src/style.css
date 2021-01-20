@@ -4,14 +4,8 @@
     --toslide-gray: #DADCE0 ;
     --toslide-normal-gray: #ADAFB3;
     --toslide-background-gray:#F4F5F6;
-    --toslide-font-gray: #ADAFB3;
+    --toslide-font-gray: #ADAFB3; 
     --border-radius: 5px;
-    --toslide-font-size: 14px;
-    --margin-small: 8px;
-    --margin-middle: 12px;
-    --padding-very-small: 4px;
-    --padding-small: 8px;
-    --padding-middle: 12px;
 }
 body {
     all:unset;
@@ -30,13 +24,7 @@ header {
     font-family: roboto !important;
     font-weight: 500;
     font-style: normal;
-    font-size: 12px;
-}
-.toslide-font-medium-12 {
-    font-family: roboto !important;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 12px;
+    font-size: 14px;
 }
 .toslide-font-medium-14 {
     font-family: roboto !important;
@@ -53,9 +41,11 @@ header {
 }
 
 /* header */
-.logo {
-    width: 85px;
-    height: 30px;
+.user-info {
+    justify-content: end;
+}
+.version {
+    color: var(--toslide-font-gray);
 }
 .icon {
     width: 26px;
@@ -65,13 +55,17 @@ header {
     border: 1px solid #dadce0;
     border-radius: 13px;
 }
+.logOut:focus {
+    outline: none;
+}
+.logOut:active {
+    background-color:var(--toslide-font-gray);
+}
 .roundBox {
     background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 8px #0000001a;
-    border-radius: 13px;
+    border-radius: 30px;
     opacity: 1;
-    height: 26px;
-    padding-left: 3px;
     letter-spacing: 0px;
     color: #000000;
     align-items: center;
@@ -122,10 +116,9 @@ header {
 }
 
 
-/* under width iphone 6 */
-@media only screen and (max-width: 380px) {
-    .toslide-font-kor {
-        font: normal normal 10px/12px Roboto;
-        font-weight: 500;
+/* up ipad */
+@media only screen and (min-width: 575px) {
+    .user-info {
+        justify-content: space-between;
     }
 }

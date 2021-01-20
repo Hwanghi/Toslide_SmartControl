@@ -12,26 +12,20 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="container p-3">
-        <div class="row brand">
+    <header class="container-sm-extend p-3 toslide-font-medium-14">
+        <div class="brand row mb-3 px-3">
             <div class="col-4"></div>
-            <div class="col-4 text-center">
-                <img src="./src/images/Toslide_logo.png" alt="Toslide." class="logo">
-            </div>
-            <div class="col-4 align-text-bottom text-end">
-                <span class="toslide-font-medium-12 p-2" style="color: #ADAFB3;">v.3.5.0</span>
-            </div>
+            <div class="col-4 text-center"><img src="./src/images/Toslide_logo.png" alt="Toslide." class="logo" height="40px"></div>
+            <div class="version col-4 p-0 pt-3 text-end">v.3.5.0</div>
         </div>
-        <div class="user-info">
-            <div class="row toslide-font-medium-12 justify-content-center my-3">
-                <div class="roundBox col-4 d-flex p-0 me-2">
-                    <img src="src/images/person.png" class="icon">
-                    <span class="toslide-font-kor">접속 인원수 11명</span>
-                </div>
-                <div class="roundBox col-7 d-flex px-1 justify-content-between">
-                    <span>leeh.compe@gmail.com</span> 
-                    <button class="logOut px-2 toslide-font-kor">로그아웃</button>
-                </div>
+        <div class="user-info row d-flex px-3">
+            <div class="roundBox col-6 col-sm-4 mb-3 d-flex justify-content-between">
+                <img src="src/images/person.png" class="icon">
+                <span class="toslide-font-kor">접속 인원수 11명</span>
+            </div>
+            <div class="roundBox col-12 col-sm-7 mb-3 px-2 d-flex justify-content-between">
+                <span>ghkdgmleotoslide1234@gmail.com</span> 
+                <button class="logOut my-1 px-2 toslide-font-kor">로그아웃</button>
             </div>
         </div>
     </header>
@@ -40,7 +34,6 @@
         <div class="p-3">
             <div class="romote-box container p-3" style="background-color: var(--toslide-background-gray); border-radius: 10px;">
                 <div class="row">
-                    <span class="subtitle text-center toslide-font-kor">청중질의응답모드</span>
                     <div class="remote-buttons col-12 d-flex justify-content-center ">
                         <button class="remote-button position-relative m-2" id="m-class" onclick="changeImage();">
                             <img src="./src/images/recive_stop.svg" id="message-switch" alt="수합중지">
