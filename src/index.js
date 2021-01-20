@@ -4,10 +4,9 @@ function changeImage() {
     mClass.classList.toggle('start');
     let messageImage = document.getElementById('message-switch'); 
     if(mClass.classList.contains('start')) {
-        messageImage.src="./src/images/수합중.svg";
+        messageImage.src="./src/images/recive.svg";
     } else {
-        console.log('수합중지');
-        messageImage.src="./src/images/수합중지.svg";
+        messageImage.src="./src/images/recive_stop.svg";
     }
     
 }
