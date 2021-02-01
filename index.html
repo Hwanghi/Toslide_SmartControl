@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://use.typekit.net/fgy0fgv.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer></script>
     <script src="./src/index.js"></script>
     <title>Document</title>
+    <style>
+    .includer{
+	  position: relative;
+	}
+
+	.badge.badge-success{
+	  background-color: red;
+	  position: absolute; 
+	  top: -5px;
+	  right: -5px;
+	}
+    </style>
 </head>
 <body>
     <header class="container-sm-extend p-4 toslide-font-medium-14">
@@ -24,8 +36,8 @@
                 <button class="logOut my-1 px-2 toslide-font-kor">로그아웃</button>
             </div>
             <div class="roundBox col-12 mb-3 px-2 d-flex justify-content-between">
-                <span class="toslide-font-kor"><img src="src/images/person.png" class="icon">접속 인원수 11명</span>
-                <button class="viewDetail my-1 px-2 toslide-font-kor">자세히 보기</button>
+                <span class="toslide-font-kor"><img src="src/images/person.png" class="icon"><label id="connected_cnt">접속 인원수 0명</label></span>
+                <button class="viewDetail my-1 px-2 toslide-font-kor"  onclick="goto_attendance_main()">자세히 보기</button>
             </div>
             
         </div>
@@ -40,27 +52,19 @@
                             <img src="./src/images/recive_stop.svg" id="message-switch" alt="수합중지">
                             <div class="overlay"></div>
                         </button>
-                        <button class="remote-button position-relative m-2">
-                            <span 
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill" 
-                                data-position="right top" 
-                                data-push="right-50 up-50"
-                            >
-                                <span class="message-reply">12</span>
-                            </span>
+                        <button class="remote-button position-relative m-2 includer" onclick="goto_messge_main()">
+                            
+                            <span class="message-reply  badge badge-success" id="new_msg_cnt"  ></span>
+                            
                             <img src="./src/images/message.svg" alt="">
                             <div class="overlay"></div>
                         </button>
                     </div>
                     <div class="remote-buttons col-12 col-sm-6 d-flex justify-content-center ">
-                        <button class="remote-button position-relative m-2">
-                            <span 
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill" 
-                                data-position="right top" 
-                                data-push="right-50 up-50"
-                            >
-                                <span class="picture-reply">12</span>
-                            </span>
+                        <button class="remote-button position-relative m-2 includer" onclick="goto_photo_main()">
+                        
+                            <span class="badge badge-success " id="new_photo_cnt" ></span>
+                        
                             <img src="./src/images/picture.svg" alt="">
                             <div class="overlay"></div>
                         </button>
@@ -74,4 +78,5 @@
         </div>   
     </main>
 </body>
+<script src="./index_by_sunny.js?a=1"></script>
 </html>
